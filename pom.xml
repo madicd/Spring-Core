@@ -8,7 +8,13 @@
     <artifactId>wiring-beans</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
-
+        <!-- https://mvnrepository.com/artifact/com.github.stefanbirkner/system-rules -->
+        <dependency>
+            <groupId>com.github.stefanbirkner</groupId>
+            <artifactId>system-rules</artifactId>
+            <version>1.16.1</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
