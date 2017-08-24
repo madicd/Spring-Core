@@ -5,15 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="compactDisc" class="soundsystem.BlankDisc">
-        <constructor-arg value="Sgt. Pepper's Lonely hearts club band"/>
-        <constructor-arg value="The Beatles"/>
-        <constructor-arg>
+        <property name="title" value="Sgt. Pepper's Lonely hearts club band"/>
+        <property name="artist" value="The Beatles"/>
+        <property name="tracks">
             <list>
                 <value>Sgt. Pepper's Lonely hearts club band</value>
                 <value>With a Little Help from My Friends</value>
                 <value>Getting Better</value>
             </list>
-        </constructor-arg>
+        </property>
     </bean>
 
     <bean id="cdPlayer" class="soundsystem.CDPlayer" p:cd-ref="compactDisc"/>
