@@ -18,6 +18,4 @@
           p:title="Sgt. Pepper's Lonely hearts club band"
           p:artist="The Beatles"
           p:tracks-ref="trackList"/>
-
-    <bean id="cdPlayer" class="soundsystem.CDPlayer" p:cd-ref="compactDisc"/>
 </beans>
