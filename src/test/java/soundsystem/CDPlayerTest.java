@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayerConfig.class)
+@ContextConfiguration("classpath:configuration.xml")
 public class CDPlayerTest {
 
     @Rule
@@ -32,6 +32,10 @@ public class CDPlayerTest {
     @Test
     public void play() {
         mediaPlayer.play();
-        assertEquals("Playing Sgt. Pepper's Lonely hearts club band by The Beatles\r\n", systemOutRule.getLog());
+        String expectedContent = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles\r\n" +
+                "-Track: Sgt. Pepper's Lonely hearts club band\r\n" +
+                "-Track: With a Little Help from My Friends\r\n" +
+                "-Track: Getting Better\r\n";
+        assertEquals(expectedContent, systemOutRule.getLog());
     }
 }

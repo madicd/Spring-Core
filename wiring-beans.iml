@@ -6,6 +6,10 @@
         <fileset id="fileset" name="CDPlayerConfig" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/soundsystem/CDPlayerConfig.java</file>
         </fileset>
+        <fileset id="fileset2" name="Configuration" removed="false">
+          <file>file://$MODULE_DIR$/src/configuration.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/soundsystem/CDPlayerConfig.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
