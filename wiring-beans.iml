@@ -9,6 +9,7 @@
         <fileset id="fileset2" name="Configuration" removed="false">
           <file>file://$MODULE_DIR$/src/configuration.xml</file>
           <file>file://$MODULE_DIR$/src/main/java/soundsystem/CDPlayerConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/datasources/DataSourceConfig.java</file>
         </fileset>
       </configuration>
     </facet>
