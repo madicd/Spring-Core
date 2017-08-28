@@ -36,10 +36,7 @@ public class CDPlayerTest {
     @Test
     public void play() {
         mediaPlayer.play();
-        String expectedContent = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles\r\n" +
-                "-Track: Sgt. Pepper's Lonely hearts club band\r\n" +
-                "-Track: With a Little Help from My Friends\r\n" +
-                "-Track: Getting Better\r\n";
+        String expectedContent = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles\r\n";
         assertEquals(expectedContent, systemOutRule.getLog());
     }
 }
