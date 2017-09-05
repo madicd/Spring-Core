@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,6 +26,9 @@ public class CDPlayerTest {
     @Autowired
     private CompactDisc cd;
 
+    @Autowired
+    private CompactDisc cdSecondCopy;
+
     @Test
     public void cdShouldNotBeNull() {
         assertNotNull(cd);
@@ -35,5 +39,10 @@ public class CDPlayerTest {
         mediaPlayer.play();
         String expectedContent = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles\r\n";
         assertEquals(expectedContent, systemOutRule.getLog());
+    }
+
+    @Test
+    public void prototypes() {
+        assertNotEquals(cd, cdSecondCopy);
     }
 }
