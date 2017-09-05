@@ -1,6 +1,8 @@
 package soundsystem;
 
+import org.springframework.aop.scope.ScopedProxyFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 
@@ -18,7 +20,7 @@ public class CDPlayerConfig {
     }
 
     @Bean
-    @Scope("prototype")
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public CompactDisc compactDisc() {
         BlankDisc blankDisc = new BlankDisc();
         blankDisc.setArtist(env.getProperty("disc.artist"));
