@@ -52,6 +52,6 @@ public class CDPlayerTest {
 
     @Test
     public void importedDiscTitle() {
-        assertEquals(discTitle, "Sgt. Pepper's Lonely hearts club band");
+        assertEquals("Sgt. Pepper's Lonely hearts club band", discTitle);
     }
 }
