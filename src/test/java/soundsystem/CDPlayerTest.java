@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -34,6 +35,9 @@ public class CDPlayerTest {
         assertNotNull(cd);
     }
 
+    @Value("${disc.title}")
+    private String discTitle;
+
     @Test
     public void play() {
         mediaPlayer.play();
@@ -44,5 +48,10 @@ public class CDPlayerTest {
     @Test
     public void prototypes() {
         assertNotEquals(cd, cdSecondCopy);
+    }
+
+    @Test
+    public void importedDiscTitle() {
+        assertEquals(discTitle, "Sgt. Pepper's Lonely hearts club band");
     }
 }
