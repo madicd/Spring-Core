@@ -1,7 +1,4 @@
-package soundsystem;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+package wiring.soundsystem;
 
 public class CDPlayer implements MediaPlayer {
 

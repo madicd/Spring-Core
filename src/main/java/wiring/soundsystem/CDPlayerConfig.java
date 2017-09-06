@@ -1,12 +1,9 @@
-package soundsystem;
+package wiring.soundsystem;
 
-import org.springframework.aop.scope.ScopedProxyFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
-
-import java.util.List;
 
 @Configuration
 @PropertySource("classpath:application.properties")

@@ -1,4 +1,4 @@
-package desserts;
+package wiring.desserts;
 
 import org.springframework.stereotype.Component;
 

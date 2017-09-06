@@ -1,6 +1,4 @@
-package soundsystem;
-
-import java.util.List;
+package wiring.soundsystem;
 
 public class BlankDisc implements CompactDisc {
 

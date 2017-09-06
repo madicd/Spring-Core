@@ -1,4 +1,4 @@
-package desserts;
+package wiring.desserts;
 
 public interface Dessert {
 }

@@ -1,6 +1,4 @@
-package soundsystem;
-
-import org.springframework.stereotype.Component;
+package wiring.soundsystem;
 
 public class SgtPeppers implements CompactDisc {
 

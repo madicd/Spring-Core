@@ -1,4 +1,4 @@
-package datasources;
+package wiring.datasources;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
