@@ -1,5 +1,6 @@
 package wiring.soundsystem;
 
+import aspects.soundsystem.TrackCounter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Configuration
 @PropertySource("classpath:application.properties")
+@EnableAspectJAutoProxy
 public class CDPlayerConfig {
 
     private final Environment env;
@@ -39,5 +41,10 @@ public class CDPlayerConfig {
         CDPlayer cdPlayer = new CDPlayer();
         cdPlayer.setCd(compactDisc);
         return cdPlayer;
+    }
+
+    @Bean
+    public TrackCounter trackCounter() {
+        return new TrackCounter();
     }
 }
