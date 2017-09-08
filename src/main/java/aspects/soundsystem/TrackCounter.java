@@ -11,17 +11,17 @@ import java.util.Map;
 public class TrackCounter {
     private Map<Integer, Integer> trackCount = new HashMap<>();
 
-    @Pointcut("execution(* wiring.soundsystem.CompactDisc.playTrack(int)) && args(trackNumber)")
-    public void trackPlayed(int trackNumber) {
+    @Pointcut("execution(* wiring.soundsystem.CompactDisc.playTrack(int)) && args(trackIndex)")
+    public void trackPlayed(int trackIndex) {
     }
 
-    @Before("trackPlayed(trackNumber)")
-    public void countTrack(int trackNumber) {
-        int count = getPlayCount(trackNumber);
-        trackCount.put(trackNumber, count + 1);
+    @Before(value = "trackPlayed(trackIndex)", argNames = "trackIndex")
+    public void countTrack(int trackIndex) {
+        int count = getPlayCount(trackIndex);
+        trackCount.put(trackIndex, count + 1);
     }
 
-    public int getPlayCount(int trackNumber) {
-        return trackCount.containsKey(trackNumber) ? trackCount.get(trackNumber) : 0;
+    int getPlayCount(int trackIndex) {
+        return trackCount.containsKey(trackIndex) ? trackCount.get(trackIndex) : 0;
     }
 }
