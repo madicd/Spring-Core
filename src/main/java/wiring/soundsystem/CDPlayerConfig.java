@@ -5,6 +5,9 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Configuration
 @PropertySource("classpath:application.properties")
 public class CDPlayerConfig {
@@ -22,6 +25,12 @@ public class CDPlayerConfig {
         BlankDisc blankDisc = new BlankDisc();
         blankDisc.setArtist(env.getProperty("disc.artist"));
         blankDisc.setTitle(env.getProperty("disc.title"));
+
+        List<String> trackList = new ArrayList<>();
+        trackList.add("Super duper track");
+        trackList.add("I don't like Beatles");
+        blankDisc.setTrackList(trackList);
+
         return blankDisc;
     }
 

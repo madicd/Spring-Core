@@ -40,8 +40,15 @@ public class CDPlayerTest {
     @Test
     public void play() {
         mediaPlayer.play();
-        String expectedContent = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles";
-        assertThat(systemOutRule.getLog(), containsString(expectedContent));
+        String consoleOutput = systemOutRule.getLog();
+        String expectedDiscName = "Playing Sgt. Pepper's Lonely hearts club band by The Beatles";
+        String expectedTrack1 = "Super duper track";
+        String expectedTrack2 = "I don't like Beatles";
+
+        assertThat(consoleOutput, containsString(expectedDiscName));
+        assertThat(consoleOutput, containsString(expectedTrack1));
+        assertThat(consoleOutput, containsString(expectedTrack2));
+
     }
 
     @Test

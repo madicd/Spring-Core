@@ -7,11 +7,12 @@
           <file>file://$MODULE_DIR$/src/main/java/soundsystem/CDPlayerConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/datasources/DataSourceConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/desserts/DessertsConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/wiring/soundsystem/CDPlayerConfig.java</file>
         </fileset>
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
