@@ -8,6 +8,7 @@
           <file>file://$MODULE_DIR$/src/main/java/datasources/DataSourceConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/desserts/DessertsConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/wiring/soundsystem/CDPlayerConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/aspects/concert/PerformanceConfig.java</file>
         </fileset>
       </configuration>
     </facet>

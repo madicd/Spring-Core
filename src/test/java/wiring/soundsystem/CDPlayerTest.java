@@ -47,7 +47,6 @@ public class CDPlayerTest {
         assertThat(consoleOutput, containsString(expectedDiscName));
         assertThat(consoleOutput, containsString(expectedTrack1));
         assertThat(consoleOutput, containsString(expectedTrack2));
-
     }
 
     @Test
