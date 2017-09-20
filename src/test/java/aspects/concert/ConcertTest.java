@@ -22,7 +22,7 @@ public class ConcertTest {
     private Performance performance;
 
     @Test
-    public void perform() throws Exception {
+    public void testIntroducer() throws Exception {
         Encorable performanceAsEncorable = (Encorable) performance;
         performanceAsEncorable.performEncore();
 
