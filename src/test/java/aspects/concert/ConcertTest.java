@@ -30,4 +30,15 @@ public class ConcertTest {
         assertThat(consoleOuput, containsString("Performing encore."));
     }
 
+    @Test
+    public void testAudienceAspect() throws Exception {
+        performance.perform();
+
+        String consoleOutput = systemOutRule.getLog();
+        assertThat(consoleOutput, containsString("Silencing cell phones."));
+        assertThat(consoleOutput, containsString("Taking a seat."));
+        assertThat(consoleOutput, containsString("LA LA LA Concert performance."));
+        assertThat(consoleOutput, containsString("CLAP CLAP CLAP!!!"));
+    }
+
 }
